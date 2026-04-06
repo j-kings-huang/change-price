@@ -17,7 +17,8 @@
   --font-regular: "PingFangSC-Regular";
   --font-light: "PingFangSC-Light";
 
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   background: var(--page-bg);
   color: var(--text-primary);
 
@@ -68,6 +69,8 @@
     width: 100%;
     max-width: var(--page-max-width);
     margin: 48px auto 0;
+    height: calc(100vh - 48px - 93px);
+    overflow-y: auto;
 
     &-info-card {
       padding: 18px var(--page-gutter) 17px;
@@ -192,6 +195,10 @@
               color: var(--text-secondary);
               white-space: nowrap;
               text-align: left;
+
+              &:last-of-type {
+                margin-left: 8px;
+              }
             }
           }
 
@@ -237,7 +244,7 @@
       }
 
       &-footer {
-        height: 286px;
+        height: 130px;
         padding: 40px 0px 0px;
         border-top: 1px solid var(--line-color);
         background: var(--page-bg);
